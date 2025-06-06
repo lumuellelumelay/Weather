@@ -1,12 +1,20 @@
 // Getting the temperature and apparent temperature for the next 6 hours
 export let location = 'Manila';
 
-const fields = ['temperature', 'temperatureApparent', 'weatherCode'];
+const fields = [
+  'temperature',
+  'temperatureApparent',
+  'weatherCode',
+  'cloudCover',
+  'precipitationProbability',
+  'precipitationType',
+  'humidity',
+];
 const units = 'metric';
 
-const url = 'Your API URL goes here';
+const url = 'url_key';
 
-export const getTemperature = async (locationName) => {
+export const getWeatherData = async (locationName) => {
   const options = {
     method: 'POST',
     headers: {
